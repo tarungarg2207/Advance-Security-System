@@ -27,7 +27,7 @@ wb = xlrd.open_workbook("db.xls")
 xl_sheet = wb.sheet_by_index(0)
 name = dict()
 for i in range(xl_sheet.nrows):
-    name[xl_sheet.cell(i, 0)] = xl_sheet.cell(i, 1)
+    name[int(xl_sheet.cell(i, 0).value)] = xl_sheet.cell(i, 1).value
 
 #name={0:"a",1:"b",2:"c",3:"d",4:"e",5:"f",6:"g",7:"h"}#creating dictionary containing names for each label
 
