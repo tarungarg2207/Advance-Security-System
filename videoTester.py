@@ -15,8 +15,8 @@ wb = xlrd.open_workbook("db.xls")
 xl_sheet = wb.sheet_by_index(0)
 name = dict()
 for i in range(xl_sheet.nrows):
-    name[xl_sheet.cell(i, 0)] = xl_sheet.cell(i, 1)
-
+    name[int(xl_sheet.cell(i, 0).value)] = xl_sheet.cell(i, 1).value
+print(name)
 cap=cv2.VideoCapture(0)
 
 while True:
