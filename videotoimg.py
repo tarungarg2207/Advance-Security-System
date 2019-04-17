@@ -16,7 +16,7 @@ while True:
         break
     print('User Id already Exist')
     
-usr_name = input("Enter your username")
+usr_name = input("Enter your username.")
 
 rb = open_workbook("db.xls")
 rsheet = rb.sheet_by_index(0)
